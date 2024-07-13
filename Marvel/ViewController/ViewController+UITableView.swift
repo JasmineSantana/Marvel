@@ -31,7 +31,23 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
+    //Executa tudo o que está na tabela
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Clicou")
+       //Criamos uma variavel Sotryboard no qual estamos pegando o nome da nossa storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        lastIndexSelected = indexPath.row
+        
+    //Precisamos pegar os dados da nossa viewController que colocamos como detailVC
+        let vc = storyboard.instantiateViewController(withIdentifier: "detailVC")
+        //criamos um guard em cima da VC para transformar ela em uma label
+        guard let detailVC = vc as? DetailViewController else {
+            return
+        }
+        detailVC.delegate = self
+
+        
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
+

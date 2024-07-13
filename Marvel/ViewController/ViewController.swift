@@ -8,11 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var heroes: [Hero] = [Hero(name: "Hulk", image: UIImage()),
-                          Hero(name: "Homem de ferro", image: UIImage()),
-                          Hero(name: "Homem Aranha", image: UIImage())]
+    var heroes: [Hero] = [Hero(name: "Hulk", image: UIImage(), description: "Hulk muito forte"),
+                          Hero(name: "Homem de ferro", image: UIImage(), description: "Homem de ferro é rico"),
+                          Hero(name: "Homem Aranha", image: UIImage(), description: "Aranha é aventureiro")]
     
-    
+    var lastIndexSelected: Int?
     
     
     @IBOutlet weak var tableView: UITableView!

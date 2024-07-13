@@ -54,7 +54,6 @@
                                         <connections>
                                             <outlet property="imageInput" destination="aJo-IP-uwY" id="xfL-Fl-P5U"/>
                                             <outlet property="nameInput" destination="us7-Yg-YWl" id="9QW-zp-ycd"/>
-                                            <segue destination="h3r-kU-s4t" kind="show" id="l2v-FC-vr3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -81,13 +80,13 @@
         <!--Detail View Controller-->
         <scene sceneID="Bot-iG-OtP">
             <objects>
-                <viewController id="h3r-kU-s4t" customClass="DetailViewController" customModule="Marvel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailVC" id="h3r-kU-s4t" customClass="DetailViewController" customModule="Marvel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y8W-hd-wIg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjH-Bb-5Vt">
-                                <rect key="frame" x="0.0" y="103" width="393" height="250"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RVu-PX-eUh">
                                         <rect key="frame" x="0.0" y="1" width="393" height="248.66666666666666"/>
@@ -112,7 +111,7 @@
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yrz-T4-ykC">
-                                <rect key="frame" x="0.0" y="353" width="393" height="465"/>
+                                <rect key="frame" x="0.0" y="309" width="393" height="509"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -133,6 +132,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xTN-06-LgN"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Yrz-T4-ykC" id="r3r-lb-tBw"/>
+                        <outlet property="imageView" destination="RVu-PX-eUh" id="0a4-od-14Z"/>
+                        <outlet property="nameLabel" destination="Oej-Z3-Oa3" id="KVj-LZ-2Bx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VSQ-mZ-V2o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
