@@ -16,3 +16,10 @@ struct Constants {
     
     
 }
+
+struct NetWorkConstants {
+    static let baseURL =  "http://gateway.marvel.com"
+    static let baseEndpoint = "/v1/public/"
+    static let heroEndpoint = "characters"
+    
+}

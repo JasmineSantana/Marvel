@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 // Criar um enumerados mensgens de erros
 enum APIError{
     case endpointError
@@ -15,6 +16,7 @@ enum APIError{
 }
 
 class APINetwork {
+    private let config = HeroAPIConfig()
   
     // Uma função que recebe outra função de retorno
     //Começamos criando uma função chamada getHeroes
@@ -27,10 +29,11 @@ class APINetwork {
         
         // URL endpoint (chamada da pagina)
         //Estamos executando uma função e caso ele não encontre a URL ele vai chamar a mensagem de error (uma das formas do Optional)
-        guard let endpoint = URL(string: "") else {
+        guard let endpoint = config.HeroUrl else {
             onError(.endpointError)
             return
         }
+        print(endpoint)
         
         // Criando uma váriavel que irá usar minha URLSession.
         //With é um parametro
@@ -61,7 +64,7 @@ class APINetwork {
                 onError(.requestError)
                 return
             }
-            
+            print(String(decoding:data, as: UTF8.self))
         }
         
         task.resume()
