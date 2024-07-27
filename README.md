@@ -12,3 +12,16 @@ git commit -m "mensagem" - colocar a mensagem (essas mensagens irão aparecer qu
 git remote add origin linkdorepositório.git
 git branch -M main
 git push -u origin main
+=======
+Chave do API
+
+Sua Chave Publica:
+
+dcc9d8accfac05ed707fa07aabce6e00
+
+Sua chave Privada:
+
+5dbde72c7ebed9993d4feb31c76d07b55f5327dc
+
+developer.marvel.com
+
